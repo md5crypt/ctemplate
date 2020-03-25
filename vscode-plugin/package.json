@@ -1,0 +1,44 @@
+{
+    "name": "ctemplate-support",
+    "displayName": "ctemplate-support",
+    "description": "ctemplate script language support",
+    "version": "0.0.1",
+    "publisher": "whatever",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "ctemplate",
+                "aliases": [
+                    "Ctemplate"
+                ],
+                "extensions": [
+                    ".c.template",
+                    ".h.template"
+                ],
+                "configuration": "./language-configuration.json",
+                "embeddedLanguages": {
+                    "source.js": "javascript",
+                    "source.c": "c"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ctemplate",
+                "scopeName": "source.ctemplate",
+                "path": "./syntaxes/ctemplate.tmLanguage.json",
+                "embeddedLanguages": {
+                    "source.js": "javascript",
+                    "source.c": "c"
+                }
+            }
+        ]
+    },
+    "dependencies": {}
+}

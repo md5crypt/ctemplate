@@ -1,0 +1,27 @@
+{
+	"name": "CTemplate",
+	"patterns": [
+		{
+			"captures": {"0": {"name": "entity.name.function"}, "1": {"patterns":[{"include": "source.js"}]}},
+			"match": "<\\?\\?(.+)\\?\\?>"
+		},
+		{
+			"captures": {"0": {"name": "entity.name.function"}, "1": {"patterns":[{"include": "source.js"}]}},
+			"match": "<\\?(.+)\\?>"
+		},
+		{
+			"begin": "<[?]{1,2}",
+			"end": "[?]{1,2}>",
+			"beginCaptures": {
+				"0": {"name": "entity.name.function"}
+			},
+			"endCaptures": {
+				"0": {"name": "entity.name.function"}
+			},
+			"patterns": [{"include": "source.js"}]
+		},
+		{"include": "source.c"}
+	],
+	"repository": {},
+	"scopeName": "source.ctemplate"
+}

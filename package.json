@@ -1,0 +1,25 @@
+{
+  "name": "ctemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/node": "^12.12.31",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "browserify": "^16.5.0",
+    "climan": "^1.0.0",
+    "eslint": "^6.8.0",
+    "minischema": "^1.0.0",
+    "tsify": "^4.0.1",
+    "typescript": "^3.8.3",
+    "uglifyify": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "eslint --ext .ts . && browserify --node -p tsify -g [ uglifyify --mangle --compress ] ./src/ctemplate.ts -o ctemplate.js",
+    "watch": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
